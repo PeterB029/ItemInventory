@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome!</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+</head>
+<body>
+    <div class="container">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="error">
+                    <p>Flash Error(s)!</p>
+                    {% for message in messages %}
+                        <p>{{message}}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+        <div class="content">
+            <!-- <div class="login_col"> -->
+                <!-- <h1 class="login_header">Login</h1> -->
+                <form action="/login_user" method="post">
+                    <fieldset class="login_col">
+                        <legend>Login</legend>
+                        <div class="entries">
+                            <div class="row">
+                                <label for="email">Email:</label>
+                                <input type="text" name="email">
+                            </div>
+                            <div class="row">
+                                <label for="password">Password:</label>
+                                <input type="password" name="password">
+                            </div>
+                            <div class="form_button">
+                                <button id="login_button">Login</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            <!-- </div> -->
+        </div>
+    </div>
+</body>
+</html>

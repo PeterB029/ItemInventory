@@ -1,0 +1,56 @@
+/*------------ALL------------*/
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: cadetblue;
+}
+
+.container {
+    margin: 50px auto;
+    width: 900px;
+    background-color: mediumpurple;
+}
+
+.error {
+    background-color: lightpink;
+    color: red;
+    display:block;
+    padding: 20px;
+    /* width: 520px; */
+}
+
+/*-----------sign_in.html------------*/
+.login_col {
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+    width: 200px;
+}
+
+.entries {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    padding: 10px;
+}
+
+.row > label {
+    display: block;
+}
+
+.form_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login_button {
+    background-color: green;
+    color: whitesmoke;
+    padding: 5px 10px;
+}
