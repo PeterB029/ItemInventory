@@ -9,25 +9,88 @@ body {
 }
 
 .container {
-    margin: 50px auto;
-    width: 900px;
-    background-color: mediumpurple;
+    margin: 0px auto;
+    padding: 20% 0%;
+    width: 1000px;
 }
 
 .error {
     background-color: lightpink;
     color: red;
     display:block;
-    padding: 20px;
-    /* width: 520px; */
+    padding: 0px;
+    opacity: 0.5;
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+}
+
+.bgImage {
+    background-image: url("../images/leone-venter-mTkXSSScrzw-unsplash.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login_image {
+    background-image: url("../images/leone-venter-mTkXSSScrzw-unsplash.jpg");
+}
+
+.register_image {
+    background-image: url("../images/pexels-alleksana-4271687.jpg");
 }
 
 /*-----------sign_in.html------------*/
-.login_col {
+.login_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 5px double white;
+    padding: 10px;
+}
+
+.left_col {
+    width:400px;
+}
+
+.right_col {
+    width: 400px;
+    font-size: 50pt;
+    font-weight: bold;
+}
+
+.right_explaination {
+    height: 200px;
+    width: 400px;
+    font-size: 16pt;
+    font-weight: bold;
+    /* background-color: white; */
+    margin: 20px auto;
+    padding: 50px;
+    border: 2px solid black;
+    /* opacity: 0.6; */
+}
+
+.form {
     background-color: white;
     margin: 20px auto;
     padding: 20px;
-    width: 200px;
+    width: 300px;
+    border: 2px solid black;
+    /* box-shadow: 5px 5px black; */
+}
+
+legend {
+    padding: 5px;
+    font-size: 20pt;
+    border: 1px solid black;
+}
+
+.legend_bg{
+    background-color: whitesmoke;
 }
 
 .entries {
@@ -37,6 +100,7 @@ body {
 
 .row {
     padding: 10px;
+    margin: auto;
 }
 
 .row > label {
@@ -49,7 +113,7 @@ body {
     align-items: center;
 }
 
-#login_button {
+#login_button, #register_button{
     background-color: green;
     color: whitesmoke;
     padding: 5px 10px;

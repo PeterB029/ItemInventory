@@ -11,10 +11,14 @@ bcrypt = Bcrypt(app)
 def index():
     return render_template('sign_in.html')
 
+@app.route('/sign_up')
+def sign_up():
+    return render_template('sign_up.html')
+
 @app.route('/register_user', methods=['POST'])
 def register_user():
     if not User.validate_user(request.form):
-        return redirect('/')
+        return redirect('/sign_up')
     hash_pass = bcrypt.generate_password_hash(request.form['password'])
     data = {
         "first_name": request.form['first_name'],

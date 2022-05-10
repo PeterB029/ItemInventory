@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome!</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+</head>
+<body>
+    <div class="bgImage register_image">
+        <div class="container">
+            <div class="login_content">
+                <div class="right_explaination">
+                    <p>Create an Account to start keeping Inventory!</p>
+                    <br>
+                    <p>Organize your items into Collections and Categories.</p>
+                    <br>
+                    <p>Track when items are running low.</p>
+                </div>
+                <div class="left_col">
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            <div class="error">
+                                {% for message in messages %}
+                                    <p>{{message}}</p>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    {% endwith %}
+                    <div class="registration_col">
+                        <form action="/register_user" method="post">
+                            <fieldset class="form">
+                                <legend class="legend_bg">Fill Out</legend>
+                                <div class="entries">
+                                    <div class="row">
+                                        <label for="first_name">First Name:</label>
+                                        <input type="text" name="first_name">
+                                    </div>
+                                    <div class="row">
+                                        <label for="last_name">Last Name:</label>
+                                        <input type="text" name="last_name">
+                                    </div>
+                                    <div class="row">
+                                        <label for="email">Email:</label>
+                                        <input type="text" name="email">
+                                    </div>
+                                    <div class="row">
+                                        <label for="password">Password</label>
+                                        <input type="text" name="password">
+                                    </div>
+                                    <div class="row">
+                                        <label for="confirm_password">Confirm Password:</label>
+                                        <input type="text" name="confirm_password">
+                                    </div>
+                                </div>
+                                <div class="form_button">
+                                    <button id="register_button">Register</button>
+                                </div>
+                            </fieldset>
+                            <p class="footer">
+                                Have an Account?
+                                <a href="/">Login</a>
+                            </p> 
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
