@@ -171,7 +171,7 @@ legend {
     margin: 20px;
 }
 
-.collection_display {
+.collection_display, .category_display {
     border: 5px double white;
     margin: 20px;
     display: flex;
@@ -179,7 +179,7 @@ legend {
     flex-flow: row wrap;
 }
 
-.collectionBox {
+.collectionBox, .categoryBox {
     background-color: navy;
     display: block;
     text-align: center;
@@ -188,12 +188,12 @@ legend {
     margin: 20px;
 }
 
-.collectionBox a {
+.collectionBox a, .categoryBox a {
     color: white;
     text-decoration: none;
 }
 
-.addCollection {
+.addCollection, .addCategory {
     background-color: aliceblue;
     width: 250px;
     height: 50px;

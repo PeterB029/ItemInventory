@@ -27,6 +27,18 @@ class Collection:
     def get_one_collection(cls, data):
         query = "SELECT * from collections WHERE id=%(id)s"
         results = connectToMySQL(db).query_db(query, data)
+        return cls(results[0])
+
+    @classmethod
+    def update_collection(cls, data):
+        query = "UPDATE collections SET title=%(title)s, image=%(image)s WHERE id=%(id)s"
+        results = connectToMySQL(db).query_db(query, data)
+        return results
+
+    @classmethod
+    def delete_collection(cls, data):
+        query = "DELETE FROM collections WHERE id=%(id)s"
+        results = connectToMySQL(db).query_db(query, data)
         return results
 
     @staticmethod
