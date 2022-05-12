@@ -14,24 +14,26 @@
                 <div class="right_explaination">
                     <p>Create an Account to start keeping Inventory!</p>
                     <br>
-                    <p>Organize your items into Collections and Categories.</p>
+                    <p>Organize items into Collections & Categories for easier managing.</p>
                     <br>
-                    <p>Track when items are running low.</p>
+                    <p>Track when items are running low to never be empty again!</p>
+                    <br>
+                    <p>Share with Friends & Families to keep track together!</p>
                 </div>
                 <div class="left_col">
-                    {% with messages = get_flashed_messages() %}
-                        {% if messages %}
-                            <div class="error">
-                                {% for message in messages %}
-                                    <p>{{message}}</p>
-                                {% endfor %}
-                            </div>
-                        {% endif %}
-                    {% endwith %}
-                    <div class="registration_col">
+                    <!-- <div class="registration_col"> -->
                         <form action="/register_user" method="post">
                             <fieldset class="form">
                                 <legend class="legend_bg">Fill Out</legend>
+                                {% with messages = get_flashed_messages() %}
+                                    {% if messages %}
+                                        <div class="error">
+                                            {% for message in messages %}
+                                                <p>{{message}}</p>
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                {% endwith %}
                                 <div class="entries">
                                     <div class="row">
                                         <label for="first_name">First Name:</label>
@@ -63,7 +65,7 @@
                                 <a href="/">Login</a>
                             </p> 
                         </form>
-                    </div>
+                    <!-- </div> -->
                 </div>
             </div>
         </div>

@@ -1,4 +1,3 @@
-/*------------ALL------------*/
 * {
     margin: 0px;
     padding: 0px;
@@ -6,11 +5,12 @@
 
 body {
     background-color: cadetblue;
+    height: 100vh; /*To ensure the background body fills the whole page.*/
 }
 
 .container {
     margin: 0px auto;
-    padding: 20% 0%;
+    padding: 10% 0%;
     width: 1000px;
 }
 
@@ -28,8 +28,11 @@ body {
 }
 
 .bgImage {
-    background-image: url("../images/leone-venter-mTkXSSScrzw-unsplash.jpg");
+    /* background-image: url("../images/leone-venter-mTkXSSScrzw-unsplash.jpg"); */
     height: 100%;
+    width: 100%;
+    /* padding: 30px; */
+    box-sizing: border-box;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -43,7 +46,6 @@ body {
     background-image: url("../images/pexels-alleksana-4271687.jpg");
 }
 
-/*-----------sign_in.html------------*/
 .login_content {
     display: flex;
     align-items: center;
@@ -65,7 +67,7 @@ body {
 .right_explaination {
     height: 200px;
     width: 400px;
-    font-size: 16pt;
+    font-size: 14pt;
     font-weight: bold;
     /* background-color: white; */
     margin: 20px auto;
@@ -113,8 +115,91 @@ legend {
     align-items: center;
 }
 
-#login_button, #register_button{
-    background-color: green;
-    color: whitesmoke;
+/* what if we combine all and name it "form_button above*/
+#login_button, #register_button, #add_button{
+    background-color: aliceblue;
+    color: black;
     padding: 5px 10px;
+}
+
+.banner {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.icon {
+    width: 50px;
+    border-radius: 5px;
+}
+
+#collectionSearchBar {
+    width: 500px;
+    height: 25px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.navButtons {
+    display: flex;
+    /* width: 1000px; */
+}
+
+.banner a {
+    /* display: block; */
+    color: black;
+    background-color: whitesmoke;
+    text-align: center;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.banner a:hover {
+    background-color: black;
+    color: whitesmoke;
+}
+
+/* .banner a.active {
+    background-color: aliceblue;
+    color: white;
+} */
+
+.header {
+    margin: 20px;
+}
+
+.collection_display {
+    border: 5px double white;
+    margin: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+}
+
+.collectionBox {
+    background-color: navy;
+    display: block;
+    text-align: center;
+    width: 250px;
+    height: 250px;
+    margin: 20px;
+}
+
+.collectionBox a {
+    color: white;
+    text-decoration: none;
+}
+
+.addCollection {
+    background-color: aliceblue;
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    font-weight: bold;
+    padding: 100px 0px;
+    margin: 20px;
+    display: inline-block;
 }

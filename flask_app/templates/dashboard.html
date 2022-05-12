@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+</head>
+<body>
+    <div class="banner">
+        <img src="{{url_for('static', filename='images/ItemInventory.jpg')}}" alt="ItemInventory Logo" class="icon">
+        <div class="searchBar">
+            <input type="search" name="searchBar" placeholder="Search Collections..." id="collectionSearchBar">
+        </div>
+        <div class="navButons">
+            <a href="">Profile</a>
+            <a href="">Notifications</a>
+            <a href="">Settings</a>
+            <a href="/">Logout</a>
+        </div>
+    </div>
+    <div class="bgImage">
+        <div class="header">
+            <h1>Hello {{session['first_name']}}!</h1>
+        </div>
+        <div class="collection_display">
+            <div class="addCollection">
+                <a href="/collection/new">
+                    <p>+</p>
+                    <p>Add Collection</p>
+                </a>
+            </div>
+            {% if all_collections %}
+                {% for collection in all_collections %}
+                    <div class="collectionBox">
+                        <a href="/collection/{{collection.id}}">{{collection.title}}</a>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

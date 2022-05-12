@@ -14,21 +14,21 @@
                 <div class="right_col">
                     <p>Organize.</p>
                     <p>Track.</p>
-                    <p>Made Simple.</p>
+                    <p>Simplified.</p>
                 </div>
                 <div class="left_col">
-                    {% with messages = get_flashed_messages() %}
-                        {% if messages %}
-                            <div class="error">
-                                {% for message in messages %}
-                                    <p>{{message}}</p>
-                                {% endfor %}
-                            </div>
-                        {% endif %}
-                    {% endwith %}
                     <form action="/login_user" method="post">
                         <fieldset class="form">
                             <legend class="legend_bg">Welcome!</legend>
+                            {% with messages = get_flashed_messages() %}
+                                {% if messages %}
+                                    <div class="error">
+                                        {% for message in messages %}
+                                            <p>{{message}}</p>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            {% endwith %}
                             <div class="entries">
                                 <div class="row">
                                     <label for="email">Email:</label>
@@ -50,10 +50,7 @@
                     </form>
                 </div>
             </div>
-            
-            
         </div>
-        
     </div>
 </body>
 </html>

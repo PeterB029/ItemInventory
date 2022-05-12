@@ -1,7 +1,7 @@
 from flask_app import app
 from flask import render_template, redirect, request, session, flash
 from flask_app.models.user import User
-# from flask_app.models.sighting import Sighting
+from flask_app.models.collection import Collection
 from flask_bcrypt import Bcrypt
 bcrypt = Bcrypt(app)
 
@@ -54,8 +54,8 @@ def success():
     if 'user_id' not in session:
         flash("You must be logged in to view this page")
         return redirect("/")
-    sightings = Sighting.get_all()
-    return render_template('dashboard.html', all_sightings = sightings)
+    collections = Collection.get_all_collections()
+    return render_template('dashboard.html', all_collections = collections)
 
 @app.route('/logout')
 def logout():

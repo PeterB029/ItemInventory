@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Collection!</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+</head>
+<body>
+    <!-- <div class="left_col"> -->
+        <div class="container">
+            <form action="/collection/create" method="POST">
+                <fieldset class="form">
+                    <legend class="legend_bg">New Collection!</legend>
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            <div class="error">
+                                {% for message in messages %}
+                                    <p>{{message}}</p>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    {% endwith %}
+                    <div class="entries">
+                        <div class="row">
+                            <label for="title">Title:</label>
+                            <input type="text" name="title">
+                        </div>
+                        <div class="row">
+                            <label for="image">Image:</label>
+                            <input type="text" name="image">
+                        </div>
+                    </div>
+                    <div class="form_button">
+                        <button id="add_button">Add Collection</button>
+                    </div>
+                </fieldset>
+                <p class="footer">
+                    <a href="/dashboard">Go Back</a>
+                </p> 
+            </form>
+        </div>
+    <!-- </div> -->
+</body>
+</html>
