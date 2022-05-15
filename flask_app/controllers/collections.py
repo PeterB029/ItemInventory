@@ -28,8 +28,7 @@ def collection_page(id):
         "id": id
     }
     collection = Collection.get_one_collection(data)
-    print(collection)
-    categories = Category.get_all_categories()
+    categories = Category.get_all_categories(data)
     return render_template('view_collection.html', this_collection = collection, all_categories = categories)
 
 @app.route('/collection/edit/<int:id>')
@@ -47,7 +46,7 @@ def edit_collection_page(id):
 @app.route('/collection/update', methods=['POST'])
 def update_collection():
     if not Collection.validate_collection(request.form):
-        return redirect('/collection/new')
+        return redirect('/collection/edit/' + request.form['id']) #CHECK HERE: Does it need to have ID to go back to the edit page.
     data = {
         "id": request.form['id'],
         "title": request.form['title'],

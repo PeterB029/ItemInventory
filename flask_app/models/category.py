@@ -18,14 +18,20 @@ class Category:
         return results
 
     @classmethod
-    def get_all_categories(cls):
-        query = "SELECT * FROM categories"
-        results = connectToMySQL(db).query_db(query)
+    def get_all_categories(cls, data):
+        query = "SELECT * FROM categories WHERE collection_id=%(id)s"
+        results = connectToMySQL(db).query_db(query, data)
         return results
 
     @classmethod
     def get_one_category(cls, data):
         query = "SELECT * from categories WHERE id=%(id)s"
+        results = connectToMySQL(db).query_db(query, data)
+        return cls(results[0])
+
+    @classmethod
+    def update_category(cls, data):
+        query = "UPDATE categories SET title=%(title)s, image=%(image)s WHERE id=%(id)s"
         results = connectToMySQL(db).query_db(query, data)
         return results
 

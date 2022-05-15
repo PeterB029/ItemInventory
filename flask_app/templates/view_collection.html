@@ -11,7 +11,7 @@
     <div class="banner">
         <img src="{{url_for('static', filename='images/ItemInventory.jpg')}}" alt="ItemInventory Logo" class="icon">
         <div class="searchBar">
-            <input type="search" name="searchBar" placeholder="Search Collections..." id="collectionSearchBar">
+            <input type="search" name="searchBar" placeholder="Search Categories/Items..." id="collectionSearchBar">
         </div>
         <div class="navButons">
             <a href="/collection/edit/{{this_collection.id}}">Edit</a>
@@ -26,7 +26,7 @@
         </div>
         <div class="category_display">
             <div class="addCategory">
-                <a href="/category/new">
+                <a href="/{{this_collection.id}}/category/new">
                     <p>+</p>
                     <p>Add category</p>
                 </a>
@@ -34,7 +34,7 @@
             {% if all_categories %}
                 {% for category in all_categories %}
                     <div class="categoryBox">
-                        <a href="/collection/{{collection.id}}">{{category.title}}</a>
+                        <a href="/{{this_collection.id}}/category/{{category.id}}">{{category.title}}</a>
                     </div>
                 {% endfor %}
             {% endif %}

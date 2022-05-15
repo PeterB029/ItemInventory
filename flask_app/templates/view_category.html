@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+</head>
+<body>
+    <div class="banner">
+        <img src="{{url_for('static', filename='images/ItemInventory.jpg')}}" alt="ItemInventory Logo" class="icon">
+        <div class="searchBar">
+            <input type="search" name="searchBar" placeholder="Search Items..." id="collectionSearchBar">
+        </div>
+        <div class="navButons">
+            <a href="/{{this_collectionID}}/category/edit/{{this_category.id}}">Edit</a>
+            <a href="">Logs</a>
+            <a href="/{{this_collectionID}}/category/delete/{{this_category.id}}">Delete</a>
+            <a href="/collection/{{this_collectionID}}">Collection</a>
+        </div>
+    </div>
+    <div class="bgImage">
+        <div class="header">
+            <h1>{{this_category.title}}</h1>
+        </div>
+        <div class="category_display">
+            <p>This is where items will be displayed</p>
+        </div>
+    </div>
+</body>
+</html>
