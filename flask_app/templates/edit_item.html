@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Item</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+</head>
+<body>
+    <div class="container">
+        <form action="/item/update" method="POST">
+            <fieldset class="form">
+                <legend class="legend_bg">Update Item</legend>
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        <div class="error">
+                            {% for message in messages %}
+                                <p>{{message}}</p>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                {% endwith %}
+                <div class="entries">
+                    <div class="row">
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" value="{{this_item.name}}">
+                    </div>
+                    <div class="row">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" name="quantity" value="{{this_item.quantity}}">
+                    </div>
+                    <div class="row">
+                        <label for="order_link">Order Link:</label>
+                        <input type="text" name="order_link" value="{{this_item.order_link}}">
+                    </div>
+                    <div class="row">
+                        <label for="notes">Notes:</label>
+                        <textarea name="notes" cols="30" rows="10">{{this_item.notes}}</textarea>
+                    </div>
+                </div>
+                <div class="form_button">
+                    <button id="add_button">Update Item</button>
+                </div>
+            </fieldset>
+            <p class="footer">
+                <a href="/{{this_collectionID}}/category/{{this_categoryID}}">Go Back</a>
+            </p>
+            <input type="hidden" name="collection_id" value="{{this_collectionID}}">
+            <input type="hidden" name="category_id" value="{{this_categoryID}}">
+            <input type="hidden" name="id" value="{{this_item.id}}">
+        </form>
+    </div>
+</body>
+</html>

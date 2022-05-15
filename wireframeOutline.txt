@@ -9,7 +9,7 @@ I originally wanted to make something that would help my father-in-law to track 
 I also wanted to make it broad enought that other uses may utilize it maybe.
 
 [REQUIRED] New Programming Concept(s) I'm Planning to Learn: 
-Tailwind CSS
+Bootstrap
 
 [REQUIRED] Week 1 Features (to show at Review during Week 2)
 - The basic page setup of login/registration along with the collection, category, and items page.

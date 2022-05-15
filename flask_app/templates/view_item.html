@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+</head>
+<body>
+    <div class="banner">
+        <img src="{{url_for('static', filename='images/ItemInventory.jpg')}}" alt="ItemInventory Logo" class="icon">
+        <div class="searchBar">
+            <!-- <input type="search" name="searchBar" placeholder="Search Items..." id="collectionSearchBar"> -->
+        </div>
+        <div class="navButons">
+            <a href="/{{this_collectionID}}/{{this_categoryID}}/item/edit/{{this_item.id}}">Edit</a>
+            <a href="">Logs</a>
+            <a href="/{{this_collectionID}}/{{this_categoryID}}/item/delete/{{this_item.id}}">Delete</a>
+            <a href="/{{this_collectionID}}/category/{{this_categoryID}}">Category</a>
+        </div>
+    </div>
+    <div class="bgImage">
+        <div class="header">
+            <h1>{{this_item.name}}</h1>
+        </div>
+        <!-- <div class="category_display"> -->
+            <fieldset class="item_details">
+                <legend class="legend_bg">Item Details</legend>
+                <h2>Quantity: {{this_item.quantity}}</h2>
+                <br>
+                <h3>Notes: {{this_item.notes}}</h3>
+            </fieldset>
+        <!-- </div> -->
+    </div>
+</body>
+</html>
