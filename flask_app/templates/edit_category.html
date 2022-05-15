@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container">
-        <form action="/category/create" method="POST">
+        <form action="/category/update" method="POST">
             <fieldset class="form">
                 <legend class="legend_bg">Update Category</legend>
                 {% with messages = get_flashed_messages() %}
@@ -32,12 +32,13 @@
                     </div>
                 </div>
                 <div class="form_button">
-                    <button id="add_button">Add Category</button>
+                    <button id="add_button">Update Category</button>
                 </div>
             </fieldset>
             <p class="footer">
                 <a href="/{{this_collectionID}}/category/{{this_category.id}}">Go Back</a>
             </p>
+            <input type="hidden" name="id" value="{{this_category.id}}">
             <input type="hidden" name="collection_id" value="{{this_collectionID}}">
         </form>
     </div>

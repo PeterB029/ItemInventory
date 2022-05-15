@@ -14,7 +14,7 @@ def add_category_page(collectionID):
 @app.route('/category/create', methods=['POST'])
 def create_category():
     if not Category.validate_category(request.form):
-        return redirect('/category/new')
+        return redirect('/' + request.form['collection_id'] + '/category/new')
     data = {
         "title": request.form['title'],
         "image": request.form['image'],
@@ -44,16 +44,16 @@ def edit_category_page(collectionID, id):
     return render_template('edit_category.html', this_category = category, this_collectionID = collectionID)
 
 @app.route('/category/update', methods=['POST'])
-def update_category(id):
+def update_category():
     if not Category.validate_category(request.form):
-        return redirect('/category/edit/' + request.form['id'])
+        return redirect('/' + request.form['collection_id'] + '/category/edit/' + request.form['id'])
     data = {
         "id": request.form['id'],
         "title": request.form['title'],
         "image": request.form['image']
     }
     Category.update_category(data)
-    return redirect(request.form['collectionID'] + '/category/' + request.form['id'])
+    return redirect('/' + request.form['collection_id'] + '/category/' + request.form['id'])
 
 @app.route('/<int:collectionID>/category/delete/<int:id>')
 def delete_category(collectionID, id):

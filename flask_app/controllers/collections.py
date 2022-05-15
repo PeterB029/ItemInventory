@@ -53,7 +53,7 @@ def update_collection():
         "image": request.form['image']
     }
     Collection.update_collection(data)
-    return redirect('/dashboard')
+    return redirect('/collection/' + request.form['id'])
 
 @app.route('/collection/delete/<int:id>')
 def delete_collection(id):
