@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: cadetblue;
+    background-color: lightslategray;
     height: 100vh; /*To ensure the background body fills the whole page.*/
 }
 
@@ -69,7 +69,7 @@ body {
     width: 400px;
     font-size: 14pt;
     font-weight: bold;
-    /* background-color: white; */
+    background-color: white;
     margin: 20px auto;
     padding: 50px;
     border: 2px solid black;
@@ -142,6 +142,7 @@ legend {
     width: 500px;
     height: 25px;
     border-radius: 10px;
+    margin-left: 200px;
     padding: 5px;
 }
 
@@ -150,8 +151,7 @@ legend {
     /* width: 1000px; */
 }
 
-.banner a {
-    /* display: block; */
+.banner a, .item_actions a {
     color: black;
     background-color: whitesmoke;
     text-align: center;
@@ -160,13 +160,21 @@ legend {
     font-size: 17px;
 }
 
-.banner a:hover {
+.banner a:hover, .item_actions a:hover {
     background-color: black;
     color: whitesmoke;
 }
 
 .header {
     margin: 20px;
+    font-size: 30pt;
+    text-align: center;
+}
+
+.sub_header {
+    margin: 20px;
+    font-size: 20pt;
+    text-align: center;
 }
 
 .collection_display, .category_display {
@@ -178,21 +186,32 @@ legend {
 }
 
 .collectionBox, .categoryBox {
-    background-color: navy;
-    display: block;
+    background-color: #72757e;
+    display: flex-end;
     text-align: center;
     width: 250px;
     height: 250px;
     margin: 20px;
 }
 
-.collectionBox a, .categoryBox a {
-    color: white;
+/* .box_image {
+    /* background-color: darkgray; 
+} */
+
+.box_link {
+    background-color: white;
+    /* height: 200px; */
+    margin: 150px 0px;
+    padding: 40px 0px;
+}
+
+.collectionBox a, .categoryBox a, .addCollection a, .addCategory a{
+    color: black;
     text-decoration: none;
 }
 
 .addCollection, .addCategory {
-    background-color: aliceblue;
+    background-color: #72757e;
     width: 250px;
     height: 50px;
     text-align: center;
@@ -205,4 +224,9 @@ legend {
 .item_details {
     margin: 20px;
     padding: 20px;
+}
+
+.item_display {
+    width: 1000px;
+    margin: auto;
 }

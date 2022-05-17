@@ -24,6 +24,9 @@
         <div class="header">
             <h1>Hello {{session['first_name']}}!</h1>
         </div>
+        <div class="sub_header">
+            <p>Below are your Collections</p>
+        </div>
         <div class="collection_display">
             <div class="addCollection">
                 <a href="/collection/new">
@@ -34,7 +37,9 @@
             {% if all_collections %}
                 {% for collection in all_collections %}
                     <div class="collectionBox">
-                        <a href="/collection/{{collection.id}}">{{collection.title}}</a>
+                        <div class="box_link">
+                            <a href="/collection/{{collection.id}}">{{collection.title}}</a>
+                        </div>
                     </div>
                 {% endfor %}
             {% endif %}

@@ -24,6 +24,9 @@
         <div class="header">
             <h1>{{this_collection.title}}</h1>
         </div>
+        <div class="sub_header">
+            <p>{{this_collection.description}}</p>
+        </div>
         <div class="category_display">
             <div class="addCategory">
                 <a href="/{{this_collection.id}}/category/new">
@@ -34,7 +37,9 @@
             {% if all_categories %}
                 {% for category in all_categories %}
                     <div class="categoryBox">
-                        <a href="/{{this_collection.id}}/category/{{category.id}}">{{category.title}}</a>
+                        <div class="box_link">
+                            <a href="/{{this_collection.id}}/category/{{category.id}}">{{category.title}}</a>
+                        </div>
                     </div>
                 {% endfor %}
             {% endif %}

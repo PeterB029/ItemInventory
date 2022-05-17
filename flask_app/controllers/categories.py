@@ -20,6 +20,7 @@ def create_category():
         return redirect('/' + request.form['collection_id'] + '/category/new')
     data = {
         "title": request.form['title'],
+        "description": request.form['description'],
         "image": request.form['image'],
         "collection_id": request.form['collection_id']
     }
@@ -60,6 +61,7 @@ def update_category():
     data = {
         "id": request.form['id'],
         "title": request.form['title'],
+        "description": request.form['description'],
         "image": request.form['image']
     }
     Category.update_category(data)
