@@ -31,19 +31,35 @@ body {
     /* background-image: url("../images/leone-venter-mTkXSSScrzw-unsplash.jpg"); */
     height: 100%;
     width: 100%;
-    /* padding: 30px; */
     box-sizing: border-box;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
 }
 
 .login_image {
     background-image: url("../images/leone-venter-mTkXSSScrzw-unsplash.jpg");
 }
 
-.register_image {
-    background-image: url("../images/pexels-alleksana-4271687.jpg");
+.image1 {
+    background-image: url("../images/pexels-castorly-stock-3912297.jpg");
+}
+
+.image2 {
+    background-image: url("../images/pexels-shvets-production-7203699.jpg");
+}
+
+.image3 {
+    background-image: url("../images/pexels-shvets-production-7203788.jpg");
+}
+
+.image4 {
+    background-image: url("../images/pexels-ivan-samkov-8963079.jpg");
+}
+
+.image5 {
+    background-image: url("../images/pexels-castorly-stock-3912297.jpg");
 }
 
 .login_content {
@@ -99,6 +115,11 @@ legend {
 .entries {
     display: flex;
     flex-direction: column;
+}
+
+#quantity_input {
+    padding: 5px;
+    width: 50px;
 }
 
 .row {
@@ -165,8 +186,12 @@ legend {
     color: whitesmoke;
 }
 
+.banner .delete_item:hover {
+    background-color: lightcoral;
+}
+
 .header {
-    margin: 20px;
+    /* margin: 0px 20px; */
     font-size: 30pt;
     text-align: center;
 }
@@ -178,6 +203,8 @@ legend {
 }
 
 .collection_display, .category_display {
+    /* background-color: lightslategray; */
+    background: rgba(204, 204, 204, 0.5);
     border: 5px double white;
     margin: 20px;
     display: flex;
@@ -201,8 +228,9 @@ legend {
 .box_link {
     background-color: white;
     /* height: 200px; */
-    margin: 150px 0px;
-    padding: 40px 0px;
+    margin-top: 160px;
+    padding: 30px 0px;
+    font-size: 20pt;
 }
 
 .collectionBox a, .categoryBox a, .addCollection a, .addCategory a{
@@ -216,6 +244,7 @@ legend {
     height: 50px;
     text-align: center;
     font-weight: bold;
+    font-size: 20pt;
     padding: 100px 0px;
     margin: 20px;
     display: inline-block;
@@ -224,9 +253,16 @@ legend {
 .item_details {
     margin: 20px;
     padding: 20px;
+    background: rgba(204, 204, 204, 0.5);
 }
 
 .item_display {
     width: 1000px;
     margin: auto;
+    background: rgba(204, 204, 204, 0.7);
+}
+
+.item_actions {
+    display: flex;
+    justify-content: space-between;
 }

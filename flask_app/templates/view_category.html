@@ -18,11 +18,11 @@
         <div class="navButons">
             <a href="/{{this_collectionID}}/category/edit/{{this_category.id}}">Edit</a>
             <a href="">Logs</a>
-            <a href="/{{this_collectionID}}/category/delete/{{this_category.id}}">Delete</a>
+            <a href="/{{this_collectionID}}/category/delete/{{this_category.id}}" class="delete_item">Delete Category</a>
             <a href="/collection/{{this_collectionID}}">Collection</a>
         </div>
     </div>
-    <div class="bgImage">
+    <div class="bgImage image4">
         <div class="header">
             <h1>{{this_category.title}}</h1>
         </div>
@@ -48,6 +48,10 @@
                                     <a href="">Remove One</a>
                                     <a href="">Remove Multiple</a>
                                     <a href="/{{this_collectionID}}/{{this_category.id}}/item/{{item.id}}">Details</a>
+                                    <a href="/{{this_collectionID}}/{{this_category.id}}/item/edit/{{item.id}}">Edit</a>
+                                    <!-- <div> -->
+                                        <a href="/{{this_collectionID}}/{{this_category.id}}/item/delete/{{item.id}}" class="delete_item">Delete</a>
+                                    <!-- </div> -->
                                 </td>
                             </tr>
                         {% endfor %}
