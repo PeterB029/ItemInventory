@@ -1,6 +1,6 @@
 # ItemInventory
 
-Personal PRoject for a Basic Inventory App.
+Personal Project for a Basic Inventory App.
 
 Allows users to create:
 Collections (Home, Office, Art, Games, etc.)
