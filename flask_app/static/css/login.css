@@ -1,0 +1,37 @@
+.login_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 5px double white;
+    padding: 10px;
+}
+
+.left_col {
+    width:400px;
+}
+
+.right_col {
+    width: 400px;
+    font-size: 50pt;
+    font-weight: bold;
+}
+
+.right_explaination {
+    height: 200px;
+    width: 400px;
+    font-size: 14pt;
+    font-weight: bold;
+    background-color: white;
+    margin: 20px auto;
+    padding: 50px;
+    border: 2px solid black;
+    /* opacity: 0.6; */
+}
+
+/* what if we combine all and name it "form_button above*/
+#login_button, #register_button, #add_button{
+    background-color: aliceblue;
+    color: black;
+    padding: 5px 10px;
+    margin: 10px;
+}

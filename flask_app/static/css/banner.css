@@ -1,0 +1,44 @@
+/* BANNER PROPERTIES */
+.banner {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.icon {
+    width: 50px;
+    border-radius: 5px;
+}
+
+#collectionSearchBar {
+    width: 600px;
+    height: 25px;
+    border-radius: 10px;
+    margin-left: 200px;
+    padding: 5px;
+}
+
+.navButtons {
+    display: flex;
+    /* width: 1000px; */
+}
+
+.banner a, .item_actions a {
+    color: black;
+    background-color: whitesmoke;
+    text-align: center;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.banner a:hover, .item_actions a:hover {
+    background-color: black;
+    color: whitesmoke;
+}
+
+.banner .delete_item:hover {
+    background-color: lightcoral;
+}

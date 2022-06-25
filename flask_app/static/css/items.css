@@ -1,0 +1,16 @@
+.item_details {
+    margin: 20px;
+    padding: 20px;
+    background: rgba(204, 204, 204, 0.5);
+}
+
+.item_display {
+    width: 1000px;
+    margin: auto;
+    background: rgba(204, 204, 204, 0.7);
+}
+
+.item_actions {
+    display: flex;
+    justify-content: space-between;
+}

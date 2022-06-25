@@ -1,0 +1,47 @@
+.collection_display, .category_display {
+    /* background-color: lightslategray; */
+    background: rgba(204, 204, 204, 0.5);
+    border: 5px double white;
+    margin: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+}
+
+.collectionBox, .categoryBox {
+    background-color: #72757e;
+    display: flex-end;
+    text-align: center;
+    width: 250px;
+    height: 250px;
+    margin: 20px;
+}
+
+/* .box_image {
+    /* background-color: darkgray; 
+} */
+
+.box_link {
+    background-color: white;
+    /* height: 200px; */
+    margin-top: 160px;
+    padding: 30px 0px;
+    font-size: 20pt;
+}
+
+.collectionBox a, .categoryBox a, .addCollection a, .addCategory a{
+    color: black;
+    text-decoration: none;
+}
+
+.addCollection, .addCategory {
+    background-color: #72757e;
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20pt;
+    padding: 100px 0px;
+    margin: 20px;
+    display: inline-block;
+}

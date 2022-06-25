@@ -1,0 +1,46 @@
+/* FORM PROPERTIES */
+.form {
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+    /* height: 450px; */
+    width: 300px;
+    border: 2px solid black;
+    /* box-shadow: 5px 5px black; */
+}
+
+legend {
+    padding: 5px;
+    font-size: 20pt;
+    border: 1px solid black;
+}
+
+.legend_bg{
+    background-color: whitesmoke;
+}
+
+.entries {
+    display: flex;
+    flex-direction: column;
+}
+
+#quantity_input {
+    padding: 5px;
+    width: 50px;
+}
+
+.row {
+    padding: 10px;
+    margin: auto;
+    width: 300px;
+}
+
+.row > label {
+    display: block;
+}
+
+.form_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

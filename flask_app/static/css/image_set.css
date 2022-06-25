@@ -1,0 +1,33 @@
+.bgImage {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.login_image {
+    background-image: url("../images/leone-venter-mTkXSSScrzw-unsplash.jpg");
+}
+
+.image1 {
+    background-image: url("../images/pexels-castorly-stock-3912297.jpg");
+}
+
+.image2 {
+    background-image: url("../images/pexels-shvets-production-7203699.jpg");
+}
+
+.image3 {
+    background-image: url("../images/pexels-shvets-production-7203788.jpg");
+}
+
+.image4 {
+    background-image: url("../images/pexels-ivan-samkov-8963079.jpg");
+}
+
+.image5 {
+    background-image: url("../images/pexels-castorly-stock-3912297.jpg");
+}
