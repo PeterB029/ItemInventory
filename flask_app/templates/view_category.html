@@ -11,18 +11,23 @@
 </head>
 <body>
     <div class="banner">
-        <img src="{{url_for('static', filename='images/ItemInventory.jpg')}}" alt="ItemInventory Logo" class="icon">
-        <div class="searchBar">
-            <input type="search" name="searchBar" placeholder="Search Items..." id="collectionSearchBar">
+        <div class="top_left">
+            <img src="{{url_for('static', filename='images/ItemInventory.jpg')}}" alt="ItemInventory Logo" class="icon">
+            <div class="searchBar">
+                <input type="search" name="searchBar" placeholder="Search Items..." id="SearchBar">
+            </div>
         </div>
         <div class="navButons">
             <a href="/{{this_collectionID}}/category/edit/{{this_category.id}}">Edit</a>
             <a href="">Logs</a>
             <a href="/{{this_collectionID}}/category/delete/{{this_category.id}}" class="delete_item">Delete Category</a>
-            <a href="/collection/{{this_collectionID}}">Collection</a>
+            <!-- <a href="/collection/{{this_collectionID}}">Collection</a> -->
         </div>
     </div>
     <div class="bgImage image4">
+        <a href="/collection/{{this_collectionID}}" class="back_arrow">
+            <p><span>&#8592;</span>Back</p>
+        </a>
         <div class="header">
             <h1>{{this_category.title}}</h1>
         </div>

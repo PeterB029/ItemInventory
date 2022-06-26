@@ -1,6 +1,6 @@
 /* BANNER PROPERTIES */
 .banner {
-    background-color: black;
+    background-color: #91B2C7;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -12,12 +12,17 @@
     border-radius: 5px;
 }
 
-#collectionSearchBar {
-    width: 600px;
+#SearchBar {
+    width: 500px;
     height: 25px;
-    border-radius: 10px;
-    margin-left: 200px;
+    margin-left: 5px;
     padding: 5px;
+    position: relative;
+}
+
+.top_left {
+    display: flex;
+    align-items: center;
 }
 
 .navButtons {

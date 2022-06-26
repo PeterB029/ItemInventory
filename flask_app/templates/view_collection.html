@@ -9,18 +9,22 @@
 </head>
 <body>
     <div class="banner">
-        <img src="{{url_for('static', filename='images/ItemInventory.jpg')}}" alt="ItemInventory Logo" class="icon">
-        <div class="searchBar">
-            <input type="search" name="searchBar" placeholder="Search Categories/Items..." id="collectionSearchBar">
+        <div class="top_left">
+            <img src="{{url_for('static', filename='images/ItemInventory.jpg')}}" alt="ItemInventory Logo" class="icon">
+            <div class="searchBar">
+                <input type="search" name="searchBar" placeholder="Search Categories/Items..." id="SearchBar">
+            </div>
         </div>
         <div class="navButons">
             <a href="/collection/edit/{{this_collection.id}}">Edit</a>
             <a href="">Logs</a>
             <a href="/collection/delete/{{this_collection.id}}" class="delete_item">Delete Collection</a>
-            <a href="/dashboard">Dashboard</a>
         </div>
     </div>
     <div class="bgImage image4">
+        <a href="/dashboard" class="back_arrow">
+            <p><span>&#8592;</span>Back</p>
+        </a>
         <div class="header">
             <h1>{{this_collection.title}}</h1>
         </div>
