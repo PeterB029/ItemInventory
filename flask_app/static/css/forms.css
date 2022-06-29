@@ -2,41 +2,69 @@
 .form {
     background-color: white;
     margin: 20px auto;
-    padding: 20px;
-    /* height: 450px; */
-    width: 300px;
-    border: 2px solid black;
-    /* box-shadow: 5px 5px black; */
+    padding: 10px;
+    width: 500px;
+    border: 5px solid black;
+    border-radius: 10%;
 }
 
 legend {
-    padding: 5px;
+    margin: 0px 35px;
+    padding: 10px;
     font-size: 20pt;
-    border: 1px solid black;
+    font-weight: bold;
+    /* border: 1px solid black; */
 }
 
-.legend_bg{
+/* .legend_bg{
     background-color: whitesmoke;
-}
+} */
 
 .entries {
+    padding: 20px;
     display: flex;
     flex-direction: column;
 }
 
-#quantity_input {
-    padding: 5px;
-    width: 50px;
+#quantity_input{
+    display: inline-block;
 }
 
-.row {
-    padding: 10px;
-    margin: auto;
+#item_name_input {
     width: 300px;
 }
 
-.row > label {
+#item_quantity_input {
+    padding: 8px;
+    width: 50px;
+    height: 15px;
+}
+
+#item_link_input {
+    width: 420px;
+}
+
+
+.row {
+    padding: 10px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.col {
     display: block;
+    margin: 0px 5px;
+}
+
+label {
+    display: block;
+    font-size: larger;
+}
+
+input {
+    height: 25px;
+    padding: 3px;
 }
 
 .form_button {
