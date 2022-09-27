@@ -10,7 +10,7 @@ def add_item(collectionID, categoryID):
     return render_template('create_item.html', collectionID, categoryID)
 
 #calls the class query method to CREATE new item in category
-@app.route('<int:collectionID>/<int:categoryID>/item/create', methods=['POST'])
+@app.route('/<int:collectionID>/<int:categoryID>/item/create', methods=['POST'])
 def create_item_category(collectionID, categoryID):
     if not Item.validate_item(request.form):
         return redirect(f"/{collectionID}/{categoryID}/item/new")
