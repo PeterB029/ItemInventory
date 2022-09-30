@@ -30,7 +30,7 @@ def collection_page(id):
     }
     this_collection = Collection.get_one_collection(data)
     all_categories = Category.get_all_categories(data)
-    return render_template('view_collection.html', this_collection, all_categories)
+    return render_template('view_collection.html', this_collection=this_collection, all_categories=all_categories)
 
 @app.route('/collection/edit/<int:id>')
 def edit_collection_page(id):
@@ -55,7 +55,7 @@ def update_collection(id):
         "image": request.form['image']
     }
     Collection.update_collection(data)
-    return redirect('/collection/' + request.form['id'])
+    return redirect(f'/collection/{id}')
 
 @app.route('/collection/delete/<int:id>')
 def delete_collection(id):

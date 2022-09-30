@@ -1,0 +1,33 @@
+/*dashboard.html*/
+
+.button_bar{
+    margin: 0px auto;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+}
+
+.add_button{
+    border-style: solid; 
+    border-color: green;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.add_button:hover{
+    background-color: green;
+    text-decoration: none;
+    color: white;
+    -moz-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+
+/* view_collection.html */
+.trail{
+    margin: 0px auto;
+    padding: 10px;
+    font-size: larger;
+}

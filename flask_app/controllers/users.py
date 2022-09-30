@@ -53,7 +53,7 @@ def success():
         flash("You must be logged in to view this page")
         return redirect("/")
     all_collections = Collection.get_all_collections()
-    return render_template('dashboard.html', all_collections)
+    return render_template('dashboard.html', all_collections=all_collections)
 
 @app.route('/logout')
 def logout():
