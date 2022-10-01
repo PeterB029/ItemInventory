@@ -8,13 +8,13 @@ class Category:
         self.id = data['id']
         self.title = data['title']
         self.description = data['description']
-        self.image = data['image']
+        # self.image = data['image']
         self.created_at = data['created_at']
         self.updated_at = data['updated_at']
     
     @classmethod
     def add_category(cls, data):
-        query = "INSERT INTO categories (title, description, image, collection_id) VALUES (%(title)s, %(description)s, %(image)s, %(collection_id)s);"
+        query = "INSERT INTO categories (title, description, image, collection_id) VALUES (%(title)s, %(description)s, %(collection_id)s);"
         results = connectToMySQL(db).query_db(query, data)
         return results
 
@@ -32,7 +32,7 @@ class Category:
 
     @classmethod
     def update_category(cls, data):
-        query = "UPDATE categories SET title=%(title)s, description=%(description)s, image=%(image)s WHERE id=%(id)s"
+        query = "UPDATE categories SET title=%(title)s, description=%(description)s WHERE id=%(id)s"
         results = connectToMySQL(db).query_db(query, data)
         return results
 

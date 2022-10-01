@@ -8,13 +8,13 @@ class Collection:
         self.id = data['id']
         self.title = data['title']
         self.description = data['description']
-        self.image = data['image']
+        # self.image = data['image']
         self.created_at = data['created_at']
         self.updated_at = data['updated_at']
     
     @classmethod
     def add_collection(cls, data):
-        query = "INSERT INTO collections (title, description, image, user_id) VALUES (%(title)s, %(description)s, %(image)s, %(user_id)s);"
+        query = "INSERT INTO collections (title, description, user_id) VALUES (%(title)s, %(description)s, %(user_id)s);"
         results = connectToMySQL(db).query_db(query, data)
         return results
 
@@ -32,7 +32,7 @@ class Collection:
 
     @classmethod
     def update_collection(cls, data):
-        query = "UPDATE collections SET title=%(title)s, description=%(description)s, image=%(image)s WHERE id=%(id)s"
+        query = "UPDATE collections SET title=%(title)s, description=%(description)s WHERE id=%(id)s"
         results = connectToMySQL(db).query_db(query, data)
         return results
 

@@ -1,5 +1,6 @@
 from flask_app import app
 from flask import render_template, redirect, request, session, flash
+from flask_app.models.collection import Collection
 from flask_app.models.category import Category
 from flask_app.models.item import Item
 
@@ -9,7 +10,7 @@ def add_category_page(collectionID):
     if 'user_id' not in session:
         flash("You must be logged in to view this page")
         return redirect('/')
-    return render_template('create_category.html', collectionID)
+    return render_template('create_category.html', collectionID=collectionID)
 
 #calls class quert methods to CREATE new category
 @app.route('/<int:collectionID>/category/create', methods=['POST'])
@@ -29,15 +30,19 @@ def create_category(collectionID):
 #opens the READ category page
 @app.route('/collection/<int:collectionID>/category/<int:id>')
 def category_page(collectionID, id):
-    data = {
+    dataCollection = {
+        "id": collectionID
+    }
+    dataCategory = {
         "id": id
     }
     dataItem = {
         "category_id": id
     }
-    this_category = Category.get_one_category(data)
+    this_collection = Collection.get_one_collection(dataCollection)
+    this_category = Category.get_one_category(dataCategory)
     all_items = Item.get_all_items(dataItem)
-    return render_template('view_category.html', this_category, all_items, collectionID)
+    return render_template('view_category.html', this_collection=this_collection, this_category=this_category, all_items=all_items)
 
     #opens the edit category page
 @app.route('/collection/<int:collectionID>/category/edit/<int:id>')

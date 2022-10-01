@@ -8,6 +8,7 @@ class Item:
         self.id = data['id']
         self.name = data['name']
         self.quantity = data['quantity']
+        self.restock_level = data['restock_level']
         self.order_link = data['order_link']
         self.notes = data['notes']
         self.created_at = data['created_at']
@@ -15,7 +16,7 @@ class Item:
 
     @classmethod
     def add_item(cls, data):
-        query = "INSERT INTO items (name, quantity, order_link, notes, category_id) VALUES (%(name)s, %(quantity)s, %(order_link)s, %(notes)s, %(category_id)s);"
+        query = "INSERT INTO items (name, quantity, restock_level, order_link, notes, category_id) VALUES (%(name)s, %(quantity)s, %(restock_level)s, %(order_link)s, %(notes)s, %(category_id)s);"
         results = connectToMySQL(db).query_db(query, data)
         return results
 
@@ -33,7 +34,7 @@ class Item:
 
     @classmethod
     def update_item(cls, data):
-        query = "UPDATE items SET name=%(name)s, quantity=%(quantity)s, order_link=%(order_link)s, notes=%(notes)s WHERE id=%(id)s"
+        query = "UPDATE items SET name=%(name)s, quantity=%(quantity)s, rstock_level=%(restock_level)s, order_link=%(order_link)s, notes=%(notes)s WHERE id=%(id)s"
         results = connectToMySQL(db).query_db(query, data)
         return results
 
